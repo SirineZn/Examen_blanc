@@ -4,6 +4,13 @@ import com.example.examen_blanc.entities.Acte;
 import com.example.examen_blanc.entities.Pathologie;
 import com.example.examen_blanc.repositories.ActeRepository;
 import com.example.examen_blanc.repositories.PathologieRepository;
+import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Service;
+
+@AllArgsConstructor
+@Service
+@Slf4j
 
 public class IActeServiceImpl implements IActeService{
     ActeRepository acteRepository;

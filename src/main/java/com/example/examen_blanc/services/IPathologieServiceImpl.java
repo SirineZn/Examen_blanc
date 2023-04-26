@@ -36,7 +36,8 @@ public class IPathologieServiceImpl implements IPathologieService{
 
     @Scheduled(fixedDelay = 30)
     public void calculerNombreActesParPathologie() {
-        List<Pathologie> pathologies = pathologieRepository.retrieveAllPathology();
+        //List<Pathologie> pathologies = pathologieRepository.retrieveAllPathology();
+        List<Pathologie> pathologies = pathologieRepository.findAll();
         for (Pathologie path:pathologies){
             log.info("le nombre d'actes par pathologies est : "+ String.valueOf(path.getActes().stream().count()));
         }
